@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "HW16": "npx ts-node ./HW16/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "LyubovBlznkvch",
