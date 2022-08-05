@@ -1,4 +1,4 @@
-export function calculator(firstNumber: number, secondNumber: number, operation: '+' | "-" | '*' | '/' | '**', result: number) {
+export function calculator(firstNumber: number, secondNumber: number, operation: '+' | "-" | '*' | '/' | '**') {
     switch (operation) {
         case '+': 
         return firstNumber + secondNumber;
