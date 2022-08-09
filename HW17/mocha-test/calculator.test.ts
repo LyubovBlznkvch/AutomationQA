@@ -30,16 +30,16 @@ describe("Tests for calculator", () => {
         calculator = new Calculator;  ;  
     });
     it("Should add numbers correctly", () => {
-        expect(calculator.numbersAdder(3, 4, "+").to.be.deep.equal(7, "Numbers are addded incorrectly!"));
+        expect(calculator.numbersAdder(3, 4, "+")).to.be.deep.equal(7, "Numbers are addded incorrectly!");
     });
     it("Should subtract numbers correctly", () => {
-        expect(calculator.numbersSubtractioner(3, 4, "-").to.be.deep.equal(-1, "Numbers are subtracted incorrectly!"));
+        expect(calculator.numbersSubtractioner(3, 4, "-")).to.be.deep.equal(-1, "Numbers are subtracted incorrectly!");
     });
     it("Should multiply numbers correctly", () => {
-        expect(calculator.numbersMultiplier(3, 4, "*").to.be.deep.equal(12, "Numbers are multiplied incorrectly!"));
+        expect(calculator.numbersMultiplier(3, 4, "*")).to.be.deep.equal(12, "Numbers are multiplied incorrectly!");
     });
     it("Should divide numbers correctly", () => {
-        expect(calculator.numbersDivider(12, 4, "/").to.be.deep.equal(3, "Numbers are divided incorrectly!"));
+        expect(calculator.numbersDivider(12, 4, "/")).to.be.deep.equal(3, "Numbers are divided incorrectly!");
     });
     after("Delete class instance", () => {
         calculator = null;
