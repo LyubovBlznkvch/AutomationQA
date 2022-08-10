@@ -6,7 +6,7 @@
   "scripts": {
     "HW16": "npx ts-node ./HW16/index.ts",
     "hw17-test-mocha": "mocha --config='./HW17/mocha-test/.mocharc.json'",
-    "hw17-test-jest": "jest",
+    "hw17-test-jest": "jest --config='./HW17/jest-test/jest.config.js'",
     "coverage": "nyc npm run hw17-test-mocha",
     "jest-coverage": "jest --coverage"
   },
