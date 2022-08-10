@@ -1,6 +1,5 @@
 {
 "extension": ["ts"],
 "spec": ["HW17/mocha-test/*.test.ts"],
-"require": ["ts-node/register"],
-"reporter": 
+"require": ["ts-node/register"]
 }
