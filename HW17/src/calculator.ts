@@ -1,24 +1,15 @@
 export class Calculator {
     constructor() {};
-    public numbersAdder(firstNumber: number, secondNumber: number, operation: '+') {
-        if (operation == '+') {
+    public numbersAdder(firstNumber: number, secondNumber: number) {
             return firstNumber + secondNumber;  
-        }
-    };
-    public numbersSubtractioner(firstNumber: number, secondNumber: number, operation: '-') {
-        if (operation == '-') {
+        };
+    public numbersSubtractioner(firstNumber: number, secondNumber: number) {
             return firstNumber - secondNumber;  
-        }
-    };
-    public numbersMultiplier(firstNumber: number, secondNumber: number, operation: '*') {
-        if (operation == '*') {
+        };
+    public numbersMultiplier(firstNumber: number, secondNumber: number) {
             return firstNumber * secondNumber;  
-        }
+        };
+    public numbersDivider(firstNumber: number, secondNumber: number) {
+            return firstNumber / secondNumber; 
     };
-    public numbersDivider(firstNumber: number, secondNumber: number, operation: '/') {
-        if (operation == '/') {
-            return firstNumber / secondNumber;  
-        }
-    };
-
 }
