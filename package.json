@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "HW16": "npx ts-node ./HW16/index.ts",
-    "hw17-test-mocha": "mocha --config='./HW17/mocha-test/.mocharc.json'",
-    "hw17-test-jest": "jest --config='./HW17/jest-test/jest.config.js'",
-    "coverage": "nyc npm run hw17-test-mocha",
-    "jest-coverage": "jest --coverage"
+    "hw17-test-mocha": "mocha --config='./HW17/.mocharc.json'",
+    "hw17-test-jest": "jest --config='./HW17/jest.config.js'",
+    "hw17-coverage": "nyc npm run hw17-test-mocha",
+    "hw17-jest-coverage": "jest --coverage"
   },
   "author": "LyubovBlznkvch",
   "license": "ISC",
