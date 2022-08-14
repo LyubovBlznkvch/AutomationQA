@@ -50,7 +50,7 @@ describe("Tests for calculator", () => {
     it("Should multiply numbers correctly", () => {
         expect(calculator.numbersMultiplier(3, -4)).to.be.deep.equal(-12, "Numbers are multiplied incorrectly!");
         expect(calculator.numbersMultiplier(3, 1.5)).to.be.deep.equal(4.5, "Numbers are multiplied incorrectly!");
-        expect(calculator.numbersMultiplier(0, 4)).to.be.deep.equal(0, "Numbers are multiplied incorrectly!");
+        expect(calculator.numbersMultiplier(0, -4)).to.be.deep.equal(0, "Numbers are multiplied incorrectly!");
     });
     it("Should divide numbers correctly", () => {
         expect(calculator.numbersDivider(12, -4)).to.be.deep.equal(-3, "Numbers are divided incorrectly!");
