@@ -1,12 +1,12 @@
 export class Calculator {
     constructor() {};
-    public numbersAdder(firstNumber: number, secondNumber: number) {
+    public adder(firstNumber: number, secondNumber: number) {
             return firstNumber + secondNumber;  
         };
-    public numbersSubtractioner(firstNumber: number, secondNumber: number) {
+    public subtractioner(firstNumber: number, secondNumber: number) {
             return firstNumber - secondNumber;  
         };
-    public numbersMultiplier(firstNumber: number, secondNumber: number) {
+    public multiplier(firstNumber: number, secondNumber: number) {
         if (firstNumber < 0 && secondNumber === 0 ) {
             return Math.abs(firstNumber * secondNumber)
         } else if (firstNumber === 0 && secondNumber < 0 ) {
@@ -15,7 +15,7 @@ export class Calculator {
             return firstNumber * secondNumber;  
         };
     };
-    public numbersDivider(firstNumber: number, secondNumber: number) {
+    public divider(firstNumber: number, secondNumber: number) {
             return firstNumber / secondNumber; 
     };
 }
