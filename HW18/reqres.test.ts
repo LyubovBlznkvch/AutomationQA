@@ -38,22 +38,25 @@ beforeEach(() => {
     });
 
     test("Should correctly read POST response", async () => {
+        const name = "Lyubov";
+        const surname = "Bliznyukovich";
        try { response = await superagent.post(`${baseURL}/users`)
         .set("Content-Type", "application/json")
-        .send({name: "Lyubov", surname: "Bliznyukovich"});
+        .send({name, surname});
     } catch(err: any) {
         throw new Error(err.massage);
     };
       expect(response.status).toBe(201);
-      expect(response.body.name).toEqual("Lyubov");
-      expect(response.body.surname).toEqual("Bliznyukovich");
+      expect(response.body.name).toEqual(name);
+      expect(response.body.surname).toEqual(surname);
     });
 
     test("Should correctly read POST response with 400 status code ", async () => {
+        const password = "123456";
         try { 
         response = await superagent.post(`${baseURL}/register`)
         .set("Content-Type", "application/json")
-        .send({password: "123456"});
+        .send({password});
     } catch(err: any) {
         expect(err.status).toBe(400);
         expect(JSON.parse(err.response.text)).toEqual({ error: "Missing email or username" });
@@ -61,41 +64,47 @@ beforeEach(() => {
     });
 
     test("Should correctly read PATCH response", async () => {
+        const name = "accountant";
         try {response = await superagent.patch(`${baseURL}/users/2`)
         .set("Content-Type", "application/json")
-        .send({name: "accountant"});
+        .send({name});
     } catch(err: any) {
         throw new Error(err.massage);
       };
         expect(response.status).toBe(200);
-        expect(response.body.name).toEqual("accountant");
+        expect(response.body.name).toEqual(name);
     });
 
     test("Should correctly read PATCH response  with 404 status", async () => {
+        const name = "accountant";
         try {response = await superagent.patch(`${baseURL}//users/2`)
         .set("Content-Type", "application/json")
-        .send({name: "accountant"});
+        .send({name});
     } catch(err: any) {
         expect(err.status).toBe(404);
     };
     });
 
     test("Should correctly read PUT response", async () => {
+        const name = "Lyuba";
+        const surname = "Blznkvch";
        try { response = await superagent.put(`${baseURL}/users/2`)
         .set("Content-Type", "application/json")
-        .send({name: "Lyuba", surname: "Blznkvch"}); 
+        .send({name, surname}); 
     } catch(err: any) {
         throw new Error(err.massage);
     };
         expect(response.status).toBe(200);
-        expect(response.body.name).toEqual("Lyuba");
-        expect(response.body.surname).toEqual("Blznkvch");
+        expect(response.body.name).toEqual(name);
+        expect(response.body.surname).toEqual(surname);
     });
 
     test("Should correctly read PUT response with 404 status", async () => {
+        const name = "Lyuba";
+        const surname = "Blznkvch";
         try { response = await superagent.put(`${baseURL}//users/2`)
          .set("Content-Type", "application/json")
-         .send({name: "Lyuba", surname: "Blznkvch"}); 
+         .send({name, surname}); 
     } catch(err: any) {
          expect(err.status).toBe(404);
     };
