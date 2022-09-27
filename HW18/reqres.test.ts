@@ -52,11 +52,10 @@ beforeEach(() => {
     });
 
     test("Should correctly read POST response with 400 status code ", async () => {
-        const password = "123456";
         try { 
         response = await superagent.post(`${baseURL}/register`)
         .set("Content-Type", "application/json")
-        .send({password});
+        .send({password: "123456"});
     } catch(err: any) {
         expect(err.status).toBe(400);
         expect(JSON.parse(err.response.text)).toEqual({ error: "Missing email or username" });
@@ -76,10 +75,9 @@ beforeEach(() => {
     });
 
     test("Should correctly read PATCH response  with 404 status", async () => {
-        const name = "accountant";
         try {response = await superagent.patch(`${baseURL}//users/2`)
         .set("Content-Type", "application/json")
-        .send({name});
+        .send({name: "accountant"});
     } catch(err: any) {
         expect(err.status).toBe(404);
     };
@@ -100,11 +98,9 @@ beforeEach(() => {
     });
 
     test("Should correctly read PUT response with 404 status", async () => {
-        const name = "Lyuba";
-        const surname = "Blznkvch";
         try { response = await superagent.put(`${baseURL}//users/2`)
          .set("Content-Type", "application/json")
-         .send({name, surname}); 
+         .send({name: "Lyuba", surname: "Blznkvch"}); 
     } catch(err: any) {
          expect(err.status).toBe(404);
     };
