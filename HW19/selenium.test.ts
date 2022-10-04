@@ -26,12 +26,12 @@ describe("nbrb.by tests", () => {
         expect(title).to.be.equal(`Электронные обращения | ${NBRB}`);
     });
 
-    it( "Should redirect to target URL", async function () {
+    it( "Should redirect to correct URL", async function () {
         await driver.get(baseURL);
-        const followingURL = "today/adminproc"
+        const targetURL = "today/adminproc"
         const administrativeProcedures = await driver.findElement(By.css("li a[href='today/adminproc']"));
         await administrativeProcedures.click();
-        await driver.wait(until.urlIs(`${baseURL}${followingURL}`));
+        await driver.wait(until.urlIs(`${baseURL}${targetURL}`));
  
     });
 
