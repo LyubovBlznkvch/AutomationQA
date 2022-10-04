@@ -26,14 +26,12 @@ describe("nbrb.by tests", () => {
         expect(title).to.be.equal(`Электронные обращения | ${NBRB}`);
     });
 
-    it( "Should redirect to correct URL", async function () {
+    it( "Should redirect to target URL", async function () {
         await driver.get(baseURL);
         const followingURL = "today/adminproc"
-        const AD = await driver.findElement(By.css("li a[href='today/adminproc']"));
-        AD.click();
-        await driver.wait(until.urlIs(`${baseURL}${followingURL}`))
-        const URL = await driver.getCurrentUrl();
-        expect(URL).to.be.equal(`${baseURL}${followingURL}`);
+        const administrativeProcedures = await driver.findElement(By.css("li a[href='today/adminproc']"));
+        await administrativeProcedures.click();
+        await driver.wait(until.urlIs(`${baseURL}${followingURL}`));
  
     });
 
@@ -48,21 +46,21 @@ describe("nbrb.by tests", () => {
         await driver.wait(until.titleContains(`Поиск по сайту | ${NBRB}`), defaultWaitingTime);
         const searchForm = await driver.findElement(By.className('form-with-frame form-multiple'));
         let isDisplayed =  await searchForm.isDisplayed();
-        expect(isDisplayed).to.be.equal(true);
+        expect(isDisplayed).to.be.true;
     });
 
     it( "Should corretly switch to english", async function () {
         await driver.findElement(By.xpath("//ul//li/a[text()='RU']")).click();
         await driver.wait(until.elementLocated(By.xpath("//ul//li/a[text()='EN']")), defaultWaitingTime).click();
         await driver.wait(until.urlIs(`${baseURL}engl`))
-        const engText = await driver.findElement(By.css(".section__header")).getText();
-        expect(engText).to.be.equal("News and Press Releases");
+        const headerText = await driver.findElement(By.css(".section__header")).getText();
+        expect(headerText).to.be.equal("News and Press Releases");
     });
 
     it( "Should highlight the block of information as selected", async function () {
         await driver.get(baseURL);
         const infoBlock = await driver.findElement(By.css("li a[href='#mm-56']"))
-        infoBlock.click();
+        await infoBlock.click();
         expect(await infoBlock.getAttribute("tabindex")).to.be.equal("-1");
     })
 
