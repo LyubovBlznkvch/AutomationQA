@@ -10,7 +10,8 @@
     "hw17-mocha-coverage": "npx nyc npm run hw17-test-mocha",
     "hw17-jest-coverage": "jest --config='./HW17/jest.config.js' --coverage",
     "hw18-api-jest": "jest --config='./HW18/jest.config.js'",
-    "hw19-selenium": "mocha --config='./HW19/.mocharc.json' --timeout 10000"
+    "hw19-selenium": "mocha --config='./HW19/.mocharc.json' --timeout 10000",
+    "hw21-patterns": "mocha --config='./HW21/.mocharc.json'"
   },
   "author": "LyubovBlznkvch",
   "license": "ISC",
