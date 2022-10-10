@@ -16,12 +16,16 @@ export class HomePage extends BasePage {
         await this.driver.get(this.url);
     };
 
-    public async getNavigationItemByLocator (locator: SELECTOR_TYPES, locatorString: string) {
+     public async getNavigationItemByLocator (locator: SELECTOR_TYPES, locatorString: string) {
         return await this.driverUtils.findElement(locator, locatorString);
     }; 
 
-    public async clickOnNavigationItemByLocator (locator: SELECTOR_TYPES, locatorString: string) {
-        await (await this.getNavigationItemByLocator(locator, locatorString)).click();
+    public async clickOnAdminProcButton () {
+        await (await this.driverUtils.findElement(SELECTOR_TYPES.CSS, "li a[href='today/adminproc']")).click();
+    };
+
+    public async clickOnApplicationsButton () {
+        await (await this.driverUtils.findElement(SELECTOR_TYPES.CLASS_NAME, "hide-1024")).click();
     };
 
     public async getSearchBar() {
@@ -36,24 +40,12 @@ export class HomePage extends BasePage {
         .perform();
     };
 
-    public async getTargetUrl() {
+    public async waitForTargetUrl() {
         await this.driver.wait(until.urlIs(this.url));
     };
 
-   /*  public async pageLanguage(language: LANGUAGE) {
-        await (await this.driverUtils.findElement(SELECTOR_TYPES.XPATH, `//ul//li/a[text()=${language}]`)).click();
-    } */
-
-    public async pageLanguageRU() {
-        await this.clickOnNavigationItemByLocator(SELECTOR_TYPES.XPATH, "//ul//li/a[text()='RU']");
-    };
-
-    public async pageLanguageEN() {
-        await this.clickOnNavigationItemByLocator(SELECTOR_TYPES.XPATH, "//ul//li/a[text()='EN']");
-    };
-
-    public async attributeGetter(locator: SELECTOR_TYPES, locatorString: string, attribute: string) {
-        return await (await this.driverUtils.findElement(locator, locatorString)).getAttribute(attribute);
+    public async switchPageLanguage(language: LANGUAGE) {
+        await (await this.driverUtils.findElement(SELECTOR_TYPES.XPATH, `//ul//li/a[text()='${language}']`)).click();
     };
 
 };

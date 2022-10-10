@@ -7,12 +7,12 @@ export class BasePage {
         this.driverUtils = new DriverUtils(driver);
     }
     
-    public async maxmizeWindow() {
+    public async maximizeWindow() {
         await this.driver.manage().window().maximize();
     };
 
     public async getPageTitle() {
-        await this.driver.getTitle();
+        return await this.driver.getTitle();
     }; 
 
     public async quitBrowser() {

@@ -12,7 +12,7 @@ export class EnglishHomePage extends HomePage {
         this.url= `${baseURL}engl`
     };
 
-    public async textGetter(locator: SELECTOR_TYPES, locatorString: string) {
+    public async getText(locator: SELECTOR_TYPES, locatorString: string) {
         return await (await this.driverUtils.findElement(locator, locatorString)).getText();
     };
 

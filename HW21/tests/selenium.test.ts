@@ -30,37 +30,34 @@ describe("nbrb.by tests", () => {
 
     it( "Should display page title correctly", async function () {
         await homePage.visitPage();
-        await homePage.maxmizeWindow();
-        await homePage.clickOnNavigationItemByLocator(SELECTOR_TYPES.CLASS_NAME, "hide-1024");
-        await applicationPage.waitForTitleIs();
+        await homePage.maximizeWindow();
+        await homePage.clickOnApplicationsButton();
+        await applicationPage.waitForPageTitle();
     });
 
     it( "Should redirect to correct URL", async function () {
         await homePage.visitPage();
-        await homePage.clickOnNavigationItemByLocator(SELECTOR_TYPES.CSS, "li a[href='today/adminproc']");
-        await adminprocPage.getTargetUrl();
+        await homePage.clickOnAdminProcButton();
+        await adminprocPage.waitForTargetUrl();
     });
 
     it( "Should redirect a user to the page that corresponds the search", async function () {
         await homePage.searchFor("");
-        await searchingPage.isTitleContains();
-        const searchForm = await searchingPage.getNavigationItemByLocator(SELECTOR_TYPES.CLASS_NAME, "form-with-frame form-multiple");
-        let isDisplayed =  await searchForm.isDisplayed();
+        await searchingPage.waitForTargetUrl();
+        const isDisplayed = await searchingPage.isDisplayedElementEnabled(SELECTOR_TYPES.CLASS_NAME, "form-with-frame form-multiple");
         expect(isDisplayed).to.be.true;
     });
 
-    it ("The button 'Законодательство' should be enabled", async function () {
-       expect(await searchingPage.isDisplayedElementEnabled(SELECTOR_TYPES.XPATH, "//a[text()='Законодательство']")).to.be.true;
+    it (`Buttons in searching form should be enabled`, async function () {
+       expect(await searchingPage.isDisplayedElementEnabled(SELECTOR_TYPES.XPATH, `//a[text()='Законодательство']`)).to.be.true;
     })
 
     it( "Should corretly switch to english", async function () {
         await homePage.visitPage();
-        await homePage.pageLanguageRU();
-        await homePage.pageLanguageEN();
-       // await homePage.pageLanguage(LANGUAGE.RU);
-       // await homePage.pageLanguage(LANGUAGE.EN);
-        await englishHomePage.getTargetUrl();
-        const headerText = await englishHomePage.textGetter(SELECTOR_TYPES.CSS, ".section__header");
+        await homePage.switchPageLanguage(LANGUAGE.RU);
+        await homePage.switchPageLanguage(LANGUAGE.EN);
+        await englishHomePage.waitForTargetUrl();
+        const headerText = await englishHomePage.getText(SELECTOR_TYPES.CSS, ".section__header");
         expect(headerText).to.be.equal("News and Press Releases");
     });
 
