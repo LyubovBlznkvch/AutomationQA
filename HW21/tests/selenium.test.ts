@@ -57,13 +57,13 @@ describe("nbrb.by tests", () => {
         await homePage.switchPageLanguage(LANGUAGE.RU);
         await homePage.switchPageLanguage(LANGUAGE.EN);
         await englishHomePage.waitForTargetUrl();
-        const headerText = await englishHomePage.getText(SELECTOR_TYPES.CSS, ".section__header");
+        const headerText = await englishHomePage.getHeadOfEnglishHomePage();
         expect(headerText).to.be.equal("News and Press Releases");
     });
 
     it( "Should highlight the block of information as selected", async function () {
         await homePage.visitPage();
-        const infoBlock = await homePage.getNavigationItemByLocator(SELECTOR_TYPES.CSS, "li a[href='#mm-56']");
+        const infoBlock = await homePage.getStatisticsElement();
         await infoBlock.click();
         expect(await infoBlock.getAttribute("tabindex")).to.be.equal("-1");
     })

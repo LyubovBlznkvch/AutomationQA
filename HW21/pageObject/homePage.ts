@@ -16,8 +16,8 @@ export class HomePage extends BasePage {
         await this.driver.get(this.url);
     };
 
-     public async getNavigationItemByLocator (locator: SELECTOR_TYPES, locatorString: string) {
-        return await this.driverUtils.findElement(locator, locatorString);
+     public async getStatisticsElement () {
+        return await this.driverUtils.findElement(SELECTOR_TYPES.CSS, "li a[href='#mm-56']");
     }; 
 
     public async clickOnAdminProcButton () {

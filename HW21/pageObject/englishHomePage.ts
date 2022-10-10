@@ -12,8 +12,8 @@ export class EnglishHomePage extends HomePage {
         this.url= `${baseURL}engl`
     };
 
-    public async getText(locator: SELECTOR_TYPES, locatorString: string) {
-        return await (await this.driverUtils.findElement(locator, locatorString)).getText();
+    public async getHeadOfEnglishHomePage() {
+        return await this.driverUtils.getText(SELECTOR_TYPES.CSS, ".section__header");
     };
-
+ 
 };

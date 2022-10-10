@@ -2,7 +2,7 @@ import { WebDriver } from "selenium-webdriver";
 import { DriverUtils } from "../utils/driverUtils";
 
 export class BasePage {
-    protected driverUtils: DriverUtils;
+    public driverUtils: DriverUtils;
     constructor(protected readonly driver: WebDriver) {
         this.driverUtils = new DriverUtils(driver);
     }
