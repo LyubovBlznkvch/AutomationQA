@@ -4,7 +4,6 @@ import { HomePage } from "./homePage";
 import { SELECTOR_TYPES } from "../utils/types";
 
 export class SearchingPage extends HomePage {
-    protected url: string;
 
     constructor(driver: WebDriver) {
         super(driver);

@@ -3,7 +3,6 @@ import { baseURL } from "../utils/constants";
 import { HomePage } from "./homePage";
 
 export class AdminprocPage extends HomePage {
-    protected url: string;
 
     constructor(driver: WebDriver) {
         super(driver);

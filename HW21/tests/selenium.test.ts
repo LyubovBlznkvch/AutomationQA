@@ -57,7 +57,7 @@ describe("nbrb.by tests", () => {
         await homePage.switchPageLanguage(LANGUAGE.RU);
         await homePage.switchPageLanguage(LANGUAGE.EN);
         await englishHomePage.waitForTargetUrl();
-        const headerText = await englishHomePage.getHeadOfEnglishHomePage();
+        const headerText = await englishHomePage.getHeaderElement();
         expect(headerText).to.be.equal("News and Press Releases");
     });
 

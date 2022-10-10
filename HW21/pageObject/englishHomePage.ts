@@ -4,7 +4,6 @@ import { HomePage } from "./homePage";
 import { SELECTOR_TYPES } from "../utils/types";
 
 export class EnglishHomePage extends HomePage {
-    protected url: string;
 
     constructor(driver: WebDriver) {
         super(driver);
@@ -12,8 +11,8 @@ export class EnglishHomePage extends HomePage {
         this.url= `${baseURL}engl`
     };
 
-    public async getHeadOfEnglishHomePage() {
-        return await this.driverUtils.getText(SELECTOR_TYPES.CSS, ".section__header");
+    public async getHeaderElement() {
+        return await this.driverUtils.getTextOfElement(SELECTOR_TYPES.CSS, ".section__header");
     };
  
 };

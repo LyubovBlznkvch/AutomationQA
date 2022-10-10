@@ -4,7 +4,6 @@ import { HomePage } from "./homePage";
 import { NBRB } from "../utils/constants";
 
 export class ApplicationPage extends HomePage {
-    protected url: string;
 
     constructor(driver: WebDriver) {
         super(driver);

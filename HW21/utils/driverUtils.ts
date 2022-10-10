@@ -10,7 +10,7 @@ export class DriverUtils {
         return await this.driver.findElement(locator);
     };
 
-    public async getText(selectorType: SELECTOR_TYPES, locatorString: string) {
+    public async getTextOfElement(selectorType: SELECTOR_TYPES, locatorString: string) {
         return await (await this.findElement(selectorType, locatorString)).getText();
     };
 

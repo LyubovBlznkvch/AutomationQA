@@ -4,7 +4,6 @@ import { LANGUAGE, SELECTOR_TYPES } from "../utils/types";
 import { BasePage } from "./basePage";
 
 export class HomePage extends BasePage {
-    protected url: string;
 
     constructor(driver: WebDriver) {
         super(driver);
