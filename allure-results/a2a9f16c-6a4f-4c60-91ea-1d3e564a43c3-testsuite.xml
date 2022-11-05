@@ -1,0 +1,82 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1667670046856' stop='1667670047726'>
+    <name>Onliner.by Home Page navigation: Verify the button Услуги inner text contains Услуги</name>
+    <title>Onliner.by Home Page navigation: Verify the button Услуги inner text contains Услуги</title>
+    <test-cases>
+        <test-case start='1667670046856' status='passed' stop='1667670046856'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1667670046856' status='passed' stop='1667670047675'>
+            <name>Given the User opens web page `${baseUrl}`</name>
+            <title>Given the User opens web page `${baseUrl}`</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps>
+                <step start='1667670046857' status='passed' stop='1667670047674'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='405c2455-e31e-4f0b-b5f9-e430ac4f7f37-attachment.json' type='application/json' size='58'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1667670047675' status='passed' stop='1667670047726'>
+            <name>Then the User sees that the button Услуги contains Услуги</name>
+            <title>Then the User sees that the button Услуги contains Услуги</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps>
+                <step start='1667670047677' status='passed' stop='1667670047714'>
+                    <name>POST /session/:sessionId/elements</name>
+                    <title>POST /session/:sessionId/elements</title>
+                    <attachments>
+                        <attachment title='Request' source='34738558-f291-4a4b-bc03-f709703fe9ed-attachment.json' type='application/json' size='68'/>
+                        <attachment title='Response' source='83155749-efbb-4694-bc34-fe8be8d55f31-attachment.json' type='application/json' size='639'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1667670047726' status='passed' stop='1667670047726'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

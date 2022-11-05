@@ -1,0 +1,140 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1667593430671' stop='1667593431835'>
+    <name>Onliner.by Home Page navigation: Empty password field</name>
+    <title>Onliner.by Home Page navigation: Empty password field</title>
+    <test-cases>
+        <test-case start='1667593430672' status='passed' stop='1667593430673'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1667593430673' status='passed' stop='1667593431465'>
+            <name>Given the User opens web page https://www.onliner.by/</name>
+            <title>Given the User opens web page https://www.onliner.by/</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps>
+                <step start='1667593430673' status='passed' stop='1667593431465'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='eb602e40-37b3-4e5f-af0e-a0c9793a2b36-attachment.json' type='application/json' size='38'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1667593431465' status='broken' stop='1667593431834'>
+            <name>When the User sign in with login of 10 symbols and epmty password field</name>
+            <title>When the User sign in with login of 10 symbols and epmty password field</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps>
+                <step start='1667593431467' status='passed' stop='1667593431512'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='cd3cfa12-fdcf-40ec-bdea-d098e276f334-attachment.json' type='application/json' size='64'/>
+                        <attachment title='Response' source='f76afd8f-e1e4-42eb-853b-cd37ba2c9d57-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1667593431516' status='passed' stop='1667593431574'>
+                    <name>POST /session/:sessionId/element/2393e78d-b708-4856-9688-fe45a8dce3ce/clear</name>
+                    <title>POST /session/:sessionId/element/2393e78d-b708-4856-9688-fe45a8dce3ce/clear</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1667593431579' status='passed' stop='1667593431738'>
+                    <name>POST /session/:sessionId/element/2393e78d-b708-4856-9688-fe45a8dce3ce/value</name>
+                    <title>POST /session/:sessionId/element/2393e78d-b708-4856-9688-fe45a8dce3ce/value</title>
+                    <attachments>
+                        <attachment title='Request' source='e320ea71-5bce-4c89-830e-ff89fb5786cb-attachment.json' type='application/json' size='26'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1667593431739' status='passed' stop='1667593431766'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='a4028ea7-9e18-4007-8742-038e8e93bd0a-attachment.json' type='application/json' size='67'/>
+                        <attachment title='Response' source='84bd73b1-6c0b-4545-80ea-4b1e2c4deca0-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1667593431768' status='broken' stop='1667593431833'>
+                    <name>POST /session/:sessionId/element/e14d6338-a756-4967-92cf-c00c92d399a0/click</name>
+                    <title>POST /session/:sessionId/element/e14d6338-a756-4967-92cf-c00c92d399a0/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <failure>
+                <message>element not interactable: element not interactable</message>
+                <stack-trace>element not interactable: element not interactable
+                  (Session info: chrome=107.0.5304.88)
+                    at getErrorFromResponseBody (D:\AutomationQA\node_modules\webdriver\build\utils.js:198:12)
+                    at NodeJSRequest._request (D:\AutomationQA\node_modules\webdriver\build\request\index.js:166:60)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+                    at async Element.wrapCommandFn (D:\AutomationQA\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.wrapCommandFn (D:\AutomationQA\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.elementErrorHandlerCallbackFn (D:\AutomationQA\node_modules\webdriverio\build\middlewares.js:24:32)
+                    at async Element.wrapCommandFn (D:\AutomationQA\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.wrapCommandFn (D:\AutomationQA\node_modules\@wdio\utils\build\shim.js:137:29)
+                    at async Element.elementErrorHandlerCallbackFn (D:\AutomationQA\node_modules\webdriverio\build\middlewares.js:24:32)
+                    at async Element.wrapCommandFn (D:\AutomationQA\node_modules\@wdio\utils\build\shim.js:137:29)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1667593431834' status='pending' stop='1667593431834'>
+            <name>Then the User sees password error massage</name>
+            <title>Then the User sees password error massage</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1667593431834' status='passed' stop='1667593431834'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

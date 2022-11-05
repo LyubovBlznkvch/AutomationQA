@@ -1,0 +1,203 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1667602502642' stop='1667602503708'>
+    <name>Onliner.by Home Page navigation: Empty login field</name>
+    <title>Onliner.by Home Page navigation: Empty login field</title>
+    <test-cases>
+        <test-case start='1667602502642' status='passed' stop='1667602502642'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1667602502642' status='passed' stop='1667602503498'>
+            <name>Given the User opens web page https://www.onliner.by/</name>
+            <title>Given the User opens web page https://www.onliner.by/</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps>
+                <step start='1667602502643' status='undefined'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='92f7c3cf-e048-4a24-b1e4-29cf9f79cd9d-attachment.json' type='application/json' size='38'/>
+                    </attachments>
+                    <steps>
+                        <step start='1667602503052' status='passed' stop='1667602503498'>
+                            <name>POST /session/:sessionId/elements</name>
+                            <title>POST /session/:sessionId/elements</title>
+                            <attachments>
+                                <attachment title='Request' source='b8dec243-0358-4f77-a305-fb2f9d711497-attachment.json' type='application/json' size='59'/>
+                            </attachments>
+                            <steps/>
+                        </step>
+                    </steps>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1667602503498' status='failed' stop='1667602503705'>
+            <name>When the User clicks on sign-in button</name>
+            <title>When the User clicks on sign-in button</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps>
+                <step start='1667602503499' status='passed' stop='1667602503520'>
+                    <name>POST /session/:sessionId/element</name>
+                    <title>POST /session/:sessionId/element</title>
+                    <attachments>
+                        <attachment title='Request' source='cf005817-3056-4171-a9be-162f68baef74-attachment.json' type='application/json' size='61'/>
+                        <attachment title='Response' source='278c730c-dd62-4516-95de-18da92a14c87-attachment.json' type='application/json' size='2'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1667602503554' status='passed' stop='1667602503557'>
+                    <name>POST /session/:sessionId/elements</name>
+                    <title>POST /session/:sessionId/elements</title>
+                    <attachments>
+                        <attachment title='Request' source='91a745b5-7b7f-42a9-8e4e-826dda2f6c53-attachment.json' type='application/json' size='59'/>
+                        <attachment title='Response' source='0841f462-eb48-47ba-8b9b-5cfabb30e560-attachment.json' type='application/json' size='83'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1667602503559' status='passed' stop='1667602503576'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='f21289fc-5faa-460e-be44-099c3cd790c4-attachment.json' type='application/json' size='8331'/>
+                        <attachment title='Response' source='e9fb0d96-b365-4642-9ddd-9c4c738c5722-attachment.json' type='application/json' size='2'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1667602503585' status='passed' stop='1667602503604'>
+                    <name>POST /session/:sessionId/execute/sync</name>
+                    <title>POST /session/:sessionId/execute/sync</title>
+                    <attachments>
+                        <attachment title='Request' source='7339d6ad-5037-4c04-a823-0d1681bbade0-attachment.json' type='application/json' size='5649'/>
+                        <attachment title='Response' source='c5beaf9b-d21b-4304-acab-777d93f4ab08-attachment.json' type='application/json' size='4'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1667602503605' status='failed' stop='1667602503705'>
+                    <name>POST /session/:sessionId/element/6795e3e8-6bc5-46ae-aa2b-359599c31607/click</name>
+                    <title>POST /session/:sessionId/element/6795e3e8-6bc5-46ae-aa2b-359599c31607/click</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments>
+                <attachment title='Response' source='a248d839-6260-4b88-ab17-f6fbfc752da8-attachment.json' type='application/json' size='4'/>
+            </attachments>
+            <failure>
+                <message>Error: Expect  to have text</message>
+                <stack-trace>Error: Expect  to have text
+                
+                Expected: "Новости"
+                Received: undefined
+                    at D:\AutomationQA\HW22\src\step-definitions\onliner-steps.ts:13:40
+                    at Generator.next (&lt;anonymous>)
+                    at fulfilled (D:\AutomationQA\HW22\src\step-definitions\onliner-steps.ts:5:58)
+                    at processTicksAndRejections (node:internal/process/task_queues:96:5)</stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1667602503705' status='broken' stop='1667602503706'>
+            <name>When the User makes the login field clear</name>
+            <title>When the User makes the login field clear</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Step "the User makes the login field clear" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.</message>
+                <stack-trace>Step "the User makes the login field clear" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.
+                	at Feature(D:\AutomationQA\HW22\features\onliner-home-page-navigation.feature):1:1
+                	at Scenario(Empty login field):31:5
+                	at Step(the User makes the login field clear):33:5
+                </stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1667602503706' status='broken' stop='1667602503707'>
+            <name>When the User sign in with epmty login field and password of 10 symbols</name>
+            <title>When the User sign in with epmty login field and password of 10 symbols</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Step "the User sign in with epmty login field and password of 10 symbols" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.</message>
+                <stack-trace>Step "the User sign in with epmty login field and password of 10 symbols" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.
+                	at Feature(D:\AutomationQA\HW22\features\onliner-home-page-navigation.feature):1:1
+                	at Scenario(Empty login field):31:5
+                	at Step(the User sign in with epmty login field and password of 10 symbols):34:5
+                </stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1667602503707' status='broken' stop='1667602503707'>
+            <name>Then the User sees login error massage</name>
+            <title>Then the User sees login error massage</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Step "the User sees login error massage" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.</message>
+                <stack-trace>Step "the User sees login error massage" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.
+                	at Feature(D:\AutomationQA\HW22\features\onliner-home-page-navigation.feature):1:1
+                	at Scenario(Empty login field):31:5
+                	at Step(the User sees login error massage):35:5
+                </stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1667602503707' status='passed' stop='1667602503708'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

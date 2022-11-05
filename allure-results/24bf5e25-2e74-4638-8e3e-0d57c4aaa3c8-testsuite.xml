@@ -1,0 +1,79 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1667605903950' stop='1667605903967'>
+    <name>Onliner.by Catalog Page navigation: Redirection on target page</name>
+    <title>Onliner.by Catalog Page navigation: Redirection on target page</title>
+    <test-cases>
+        <test-case start='1667605903952' status='passed' stop='1667605903954'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1667605903955' status='broken' stop='1667605903956'>
+            <name>When the User clicks on catalog button</name>
+            <title>When the User clicks on catalog button</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Step "the User clicks on catalog button" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.</message>
+                <stack-trace>Step "the User clicks on catalog button" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.
+                	at Feature(D:\AutomationQA\HW22\features\onliner-catalog-navigation.feature):1:1
+                	at Scenario(Redirection on target page):6:1
+                	at Step(the User clicks on catalog button):7:1
+                </stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1667605903957' status='broken' stop='1667605903959'>
+            <name>Then the User sees "Каталог Onlíner" as the page title</name>
+            <title>Then the User sees "Каталог Onlíner" as the page title</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Step "the User sees "Каталог Onlíner" as the page title" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.</message>
+                <stack-trace>Step "the User sees "Каталог Onlíner" as the page title" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.
+                	at Feature(D:\AutomationQA\HW22\features\onliner-catalog-navigation.feature):1:1
+                	at Scenario(Redirection on target page):6:1
+                	at Step(the User sees "Каталог Onlíner" as the page title):8:1
+                </stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1667605903959' status='passed' stop='1667605903966'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

@@ -1,0 +1,124 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1667593105929' stop='1667593106999'>
+    <name>Onliner.by Home Page navigation: Empty login field</name>
+    <title>Onliner.by Home Page navigation: Empty login field</title>
+    <test-cases>
+        <test-case start='1667593105929' status='passed' stop='1667593105929'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+        <test-case start='1667593105929' status='passed' stop='1667593106997'>
+            <name>Given the User opens web page https://www.onliner.by/</name>
+            <title>Given the User opens web page https://www.onliner.by/</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps>
+                <step start='1667593105930' status='passed' stop='1667593106996'>
+                    <name>POST /session/:sessionId/url</name>
+                    <title>POST /session/:sessionId/url</title>
+                    <attachments>
+                        <attachment title='Request' source='8428c7e8-f37a-4631-a90f-6487733cb640-attachment.json' type='application/json' size='38'/>
+                    </attachments>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+        </test-case>
+        <test-case start='1667593106997' status='broken' stop='1667593106997'>
+            <name>When the User makes the login field clear</name>
+            <title>When the User makes the login field clear</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Step "the User makes the login field clear" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.</message>
+                <stack-trace>Step "the User makes the login field clear" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.
+                	at Feature(D:\AutomationQA\HW22\features\onliner-home-page-navigation.feature):1:1
+                	at Scenario(Empty login field):30:5
+                	at Step(the User makes the login field clear):31:5
+                </stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1667593106997' status='broken' stop='1667593106998'>
+            <name>When the User sign in with epmty login field and password of 10 symbols</name>
+            <title>When the User sign in with epmty login field and password of 10 symbols</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Step "the User sign in with epmty login field and password of 10 symbols" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.</message>
+                <stack-trace>Step "the User sign in with epmty login field and password of 10 symbols" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.
+                	at Feature(D:\AutomationQA\HW22\features\onliner-home-page-navigation.feature):1:1
+                	at Scenario(Empty login field):30:5
+                	at Step(the User sign in with epmty login field and password of 10 symbols):32:5
+                </stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1667593106998' status='broken' stop='1667593106998'>
+            <name>Then the User sees login error massage</name>
+            <title>Then the User sees login error massage</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Step "the User sees login error massage" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.</message>
+                <stack-trace>Step "the User sees login error massage" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.
+                	at Feature(D:\AutomationQA\HW22\features\onliner-home-page-navigation.feature):1:1
+                	at Scenario(Empty login field):30:5
+                	at Step(the User sees login error massage):33:5
+                </stack-trace>
+            </failure>
+        </test-case>
+        <test-case start='1667593106998' status='passed' stop='1667593106999'>
+            <name></name>
+            <title></title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-1'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='chrome-107.0.5304.88'/>
+            </parameters>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
