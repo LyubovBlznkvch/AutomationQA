@@ -1,0 +1,23 @@
+{
+    "cSpell.words": [
+        "concatenator",
+        "randomstring"
+    ],
+    "cucumberautocomplete.steps": [
+        "**/*/step-definitions/*.ts",
+        // "**/*/step_definitions/*.js"
+    ],
+    "cucumberautocomplete.syncfeatures": "**/*.feature",
+    "cucumberautocomplete.strictGherkinCompletion": true,
+    "cucumberautocomplete.strictGherkinValidation": true,
+    "cucumberautocomplete.smartSnippets": true,
+    "cucumberautocomplete.stepsInvariants": true,
+    "cucumberautocomplete.skipDocStringsFormat": true,
+    "cucumberautocomplete.onTypeFormat": true,
+    "editor.quickSuggestions": {
+        "comments": false,
+        "strings": true,
+        "other": true
+    },
+    "cucumberautocomplete.gherkinDefinitionPart": "(Given|When|Then)\\("
+}
