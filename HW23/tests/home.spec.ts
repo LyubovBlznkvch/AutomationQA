@@ -35,7 +35,7 @@ test("Should redirect a user to the page that corresponds the search", async ({p
 
 
 
-/* test("Should redirect to correct URL", async ({ page }) => {
+test("Should redirect to correct URL", async ({ page }) => {
     const HomePage = PageFactory.getPage(page, PAGES.HOME);
     const AdminprocPage = PageFactory.getPage(page, PAGES.ADMINPOC) as AdminprocPage;
     await HomePage.visitPage();
@@ -52,7 +52,5 @@ test("Should corretly switch to english", async ({ page }) => {
     const headerText = await EnglishHomePage.getHeaderElementText();
     expect(headerText).toEqual("News and Press Releases");
 
-}); */
-
-
+});
 });
