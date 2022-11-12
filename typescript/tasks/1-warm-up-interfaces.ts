@@ -5,17 +5,8 @@
 */
 
 export interface City {
-    name: string;
-};
-
-export interface Coords {
-  latitude: number,
-  longtitude: number
-};
-
-export interface Info extends City {
-  coords: Coords
-};
+  name: string;
+}
 
 /* [Declare your "Coords" and "Info" interfaces below.] */
 
@@ -23,6 +14,6 @@ export interface Info extends City {
 
 // interface Info {}
 
-export let montreal: Info;
+export let montreal: unknown;
 
-export let tampa: Info;
+export let tampa: unknown;

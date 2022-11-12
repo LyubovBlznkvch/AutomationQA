@@ -12,7 +12,8 @@
     "hw18-api-jest": "jest --config='./HW18/jest.config.js'",
     "hw19-selenium": "mocha --config='./HW19/.mocharc.json' --timeout 10000",
     "hw21-patterns": "mocha --config='./HW21/.mocharc.json'",
-    "hw22-wdio-cucumber": "wdio ./HW22/config/wdio.conf.ts"
+    "hw22-wdio-cucumber": "wdio ./HW22/config/wdio.conf.ts",
+    "hw22-wdio-allure-report": "allure generate HW22/allure-results --clean -o HW22/allure-report && allure open ./HW22/allure-report"
   },
   "author": "LyubovBlznkvch",
   "license": "ISC",
@@ -28,9 +29,10 @@
     "@typescript-eslint/parser": "^5.32.0",
     "@wdio/allure-reporter": "^7.25.1",
     "@wdio/cli": "^7.25.1",
-    "@wdio/cucumber-framework": "^7.25.1",
+    "@wdio/cucumber-framework": "^7.26.0",
     "@wdio/local-runner": "^7.25.1",
     "@wdio/spec-reporter": "^7.25.1",
+    "@wdio/types": "^7.25.4",
     "allure-commandline": "^2.18.1",
     "allure-mocha": "^2.0.0-beta.18",
     "chai": "^4.3.6",

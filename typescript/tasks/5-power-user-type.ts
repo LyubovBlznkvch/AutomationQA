@@ -7,7 +7,7 @@
     all the fields in the code.
 
     Hint: use utility types.
-
+    
 */
 
 interface User {

@@ -1,4 +1,0 @@
-{
-  "using": "xpath",
-  "value": "//input[placeholder=\"Ник или e-mail\"]"
-}

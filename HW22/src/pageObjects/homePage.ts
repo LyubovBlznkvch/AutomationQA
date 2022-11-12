@@ -8,10 +8,6 @@ export class HomePage extends BasePage {
     return $$('.b-main-navigation__text');
   };
 
-  public async getCatalogButton() {
-     return $('//span[text() = "Каталог"]');
-  };
-
   public getSearchBar() {
     return $('.fast-search__input')
   };
@@ -25,19 +21,19 @@ export class HomePage extends BasePage {
   };
 
   public getLoginInput() {
-    return $('//input[placeholder="Ник или e-mail"]');
+    return $('//input[@placeholder="Ник или e-mail"]');
   };
  
   public getPasswordInput() {
-    return $('//input[type="password"]');
+    return $('//input[@placeholder="Пароль"]');
   };
   
   public getSubmitButton() {
-    return $('//button[type="submit"]');
+    return $('//div[@class="auth-form__control auth-form__control_condensed-additional"]/button[@type="submit"]');
   };
 
   public getErrorMassage() {
-    return $('//div[text()="Неверный логин или пароль"]')
+    return $('//div[@class="auth-form__line auth-form__line_condensed"]/div[@class="auth-form__description auth-form__description_error auth-form__description_base auth-form__description_extended-other"]');
   };
 
   public async performSignIn (login: string, password: string) {
@@ -45,6 +41,7 @@ export class HomePage extends BasePage {
     await (await this.getPasswordInput()).setValue(password);
     await (await this.getSubmitButton()).click(); 
 };
+
 };
 
 export const homePage = new HomePage();

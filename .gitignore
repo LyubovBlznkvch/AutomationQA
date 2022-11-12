@@ -4,3 +4,5 @@ coverage/
 *.exe
 **/*/screenshots/
 .vscode
+allure-results/
+allure-report/

@@ -18,12 +18,7 @@ interface Admin {
     role: string;
 }
 
-export type Person = {
-    name: string,
-    age: number,
-    occupation?: string,
-    role?: string
-}; /* [Declare type "Person" here.] */
+export type Person = unknown; /* [Declare type "Person" here.] */
 
 export const persons: Person[] = [
     {

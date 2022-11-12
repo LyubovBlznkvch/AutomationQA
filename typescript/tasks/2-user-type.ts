@@ -4,11 +4,7 @@
     
 */
 
-export type User = {
-    name: string,
-    age: number,
-    occupation: string
-};
+export type User = unknown; /* [Declare type "User" here.] */
 
 export const users: User[] = [
     {
