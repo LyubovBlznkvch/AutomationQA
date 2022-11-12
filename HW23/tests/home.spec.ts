@@ -33,8 +33,6 @@ test("Should redirect a user to the page that corresponds the search", async ({p
     expect(isDisplayed).toBeTruthy();
 })
 
-
-
 test("Should redirect to correct URL", async ({ page }) => {
     const HomePage = PageFactory.getPage(page, PAGES.HOME);
     const AdminprocPage = PageFactory.getPage(page, PAGES.ADMINPOC) as AdminprocPage;
