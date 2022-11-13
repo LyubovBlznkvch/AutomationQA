@@ -3,6 +3,8 @@ import { validLogin } from "../support/constants";
 import { homePage } from "../pageObjects/homePage";
 import { catalogPage } from "../pageObjects/catalogPage";
 import { generateAlphabeticString } from "../support/helpers";
+import { truncate } from "fs";
+import { Browser } from "selenium-webdriver";
 
 Given(/^the User opens web page (.+)$/, async (url) => {
     await browser.url(url);
@@ -49,7 +51,15 @@ When(/^the User signs in with valid login and invalid password of (.+) symbols$/
 });
 
 Then(/^the User sees password error massage$/, async () => {
+    if (await homePage.isElementDisplayed('//div[text() = "Помогите нам улучшить безопасность"]')) {
+    await homePage.switchToFrame();
+    await homePage.clickOnCheckBox();
     const passwordErrorMassage = await homePage.getErrorMassage();
     await passwordErrorMassage.waitForDisplayed();
     expect(passwordErrorMassage).toHaveText("Неверный логин или пароль");
+    } else {
+    const passwordErrorMassage = await homePage.getErrorMassage();
+    await passwordErrorMassage.waitForDisplayed();
+    expect(passwordErrorMassage).toHaveText("Неверный логин или пароль");
+    };
 });
