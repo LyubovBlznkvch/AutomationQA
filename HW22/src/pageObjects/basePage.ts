@@ -6,4 +6,8 @@ export class BasePage {
     get currentUrl() {
         return browser.getUrl();
     };
+
+    public isElementDisplayed(locatorString: string) {
+        return $(locatorString).isDisplayed();
+    };
 };

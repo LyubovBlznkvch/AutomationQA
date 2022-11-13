@@ -8,9 +8,6 @@ export class CatalogPage extends BasePage {
     public getSectionButton() {
         return $('//span[text() = "Onlíner Prime"]');
     };
-    public isElementDisplayed(locatorString: string) {
-        return $(locatorString).isDisplayed();
-    };
 };
 
 export const catalogPage = new CatalogPage();

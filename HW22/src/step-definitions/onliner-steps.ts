@@ -25,9 +25,9 @@ Then(/^the User sees (.+) as the page title$/, async (pageTitle) => {
  });
 });
 
-Then(/^the User sees that the button (.+) contains (.+)$/, async (buttonName, buttonText) => {
+Then(/^the User sees that the text of button (.+) contains (.+)$/, async (buttonIndex, buttonText) => {
     const onlinerButtons = await homePage.getOnlinerButtons();
-    expect(onlinerButtons[buttonName]).toHaveText(buttonText);
+    await expect(onlinerButtons[buttonIndex - 1]).toHaveText(buttonText);
 });
 
 When(/^the User clicks on sign-in button$/, async () => {
@@ -42,14 +42,14 @@ Then(/^the User sees opened sign-in form$/, async () => {
 });
 
 
-When(/^the User sign in with valid login and invalid password of (.+) symbols$/, async (length) => {
+When(/^the User signs in with valid login and invalid password of (.+) symbols$/, async (passwordLength) => {
     await (await homePage.getSignInForm()).waitForExist();
-    const invalidPassword  = generateAlphabeticString(length);
+    const invalidPassword  = generateAlphabeticString(passwordLength);
     await homePage.performSignIn(validLogin, invalidPassword);
 });
 
 Then(/^the User sees password error massage$/, async () => {
     const passwordErrorMassage = await homePage.getErrorMassage();
-    passwordErrorMassage.waitForDisplayed();
+    await passwordErrorMassage.waitForDisplayed();
     expect(passwordErrorMassage).toHaveText("Неверный логин или пароль");
 });
