@@ -54,12 +54,8 @@ Then(/^the User sees password error massage$/, async () => {
     if (await homePage.isElementDisplayed('//div[text() = "Помогите нам улучшить безопасность"]')) {
     await homePage.switchToFrame();
     await homePage.clickOnCheckBox();
-    const passwordErrorMassage = await homePage.getErrorMassage();
-    await passwordErrorMassage.waitForDisplayed();
-    expect(passwordErrorMassage).toHaveText("Неверный логин или пароль");
-    } else {
-    const passwordErrorMassage = await homePage.getErrorMassage();
-    await passwordErrorMassage.waitForDisplayed();
-    expect(passwordErrorMassage).toHaveText("Неверный логин или пароль");
     };
+    const passwordErrorMassage = await homePage.getErrorMassage();
+    await passwordErrorMassage.waitForDisplayed();
+    expect(passwordErrorMassage).toHaveText("Неверный логин или пароль");
 });

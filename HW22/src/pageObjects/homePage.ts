@@ -44,18 +44,17 @@ export class HomePage extends BasePage {
 
 public async switchToFrame() {
   const frame = await $("iframe[src='https://www.google.com/recaptcha/api2/anchor?ar=2&k=6Ld-7qgZAAAAAD46rcYUMrB1c-m4ipuoXuhPyCgc&co=aHR0cHM6Ly93d3cub25saW5lci5ieTo0NDM.&hl=ru&v=jF-AgDWy8ih0GfLx4Semh9UK&size=normal&cb=mwo0dn80prl4']");
-  await frame.isDisplayed();
-  await browser.switchToFrame($(frame));
-  };
+  await frame.waitForDisplayed();
+  await browser.switchToFrame(frame);
+};
 
 public getCheckBox() {
-  return $('.recaptcha-checkbox');
+  return $('.recaptcha-checkbox-border');
 };
 
 public async clickOnCheckBox() {
   await (await this.getCheckBox()).click(); 
 };
-
 };
 
 export const homePage = new HomePage();
