@@ -5,7 +5,7 @@
 */
 
 export interface City {
-    name: string;
+  name: string;
 }
 
 /* [Declare your "Coords" and "Info" interfaces below.] */
