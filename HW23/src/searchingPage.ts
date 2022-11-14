@@ -1,5 +1,5 @@
 import { HomePage } from "./homePage";
-import { Page, expect } from "@playwright/test";
+import { Page } from "@playwright/test";
 import { baseURL } from "../utils/constants";
 
 
@@ -11,9 +11,9 @@ export class SearchingPage extends HomePage {
         this.url= `${baseURL}search?searchText=`
     };
 
- public async isDisplayedElementEnabled() {
+public isElementVisible() {
     const element = this.page.locator(".form-with-frame form-multiple");
-    return element.isEnabled();
+    return element.isVisible();
 }; 
 
 };

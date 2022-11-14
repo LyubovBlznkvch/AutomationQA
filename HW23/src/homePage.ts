@@ -24,18 +24,10 @@ public async clickOnApplicationsButton () {
 };
 
 public async searchFor(text: string) {
-    await this.page.locator(".search__input").fill(text);
+    const searchingBar = this.page.locator(".search__input");
+    await searchingBar.type(text);
     await this.page.keyboard.press('Enter');
 };
-
-/* public async searchFor(text: string) {
-    await this.driver.actions()
-    .click(await this.getSearchBar())
-    .sendKeys(text)
-    .sendKeys(Key.RETURN)
-    .perform();
-}; */
-
 
 public async waitForTargetUrl() {
     expect(this.page).toHaveURL(this.url)

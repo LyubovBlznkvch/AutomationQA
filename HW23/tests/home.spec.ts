@@ -1,11 +1,11 @@
 import { test, expect } from "@playwright/test";
-import { HomePage } from '../src/homePage';
 import { ApplicationPage} from '../src/applicationPage';
 import { AdminprocPage } from "../src/adminprocPage";
 import { PageFactory} from '../src/pageFactory';
 import { LANGUAGE, PAGES } from "../utils/types";
 import { EnglishHomePage } from "../src/englishHomePage";
 import { SearchingPage } from "../src/searchingPage";
+
 
 test.describe('nbrb.by tests', async () => {
 test("Should highlight the block of information as selected", async ({ page }) => {
@@ -24,15 +24,6 @@ test("Should display page title correctly", async ({ page }) => {
     await ApplicationPage.waitForPageTitle();
 });
 
-test("Should redirect a user to the page that corresponds the search", async ({page}) => {
-    const HomePage = PageFactory.getPage(page, PAGES.HOME);
-    const SearchingPage = PageFactory.getPage(page, PAGES.SEARCHING) as SearchingPage;
-    await HomePage.visitPage();
-    await HomePage.searchFor('');
-    const isDisplayed = SearchingPage.isDisplayedElementEnabled();
-    expect(isDisplayed).toBeTruthy();
-})
-
 test("Should redirect to correct URL", async ({ page }) => {
     const HomePage = PageFactory.getPage(page, PAGES.HOME);
     const AdminprocPage = PageFactory.getPage(page, PAGES.ADMINPOC) as AdminprocPage;
@@ -50,5 +41,14 @@ test("Should corretly switch to english", async ({ page }) => {
     const headerText = await EnglishHomePage.getHeaderElementText();
     expect(headerText).toEqual("News and Press Releases");
 
+});
+
+test.only("Should redirect a user to the page that corresponds the search", async ({page}) => {
+    const HomePage = PageFactory.getPage(page, PAGES.HOME);
+    const SearchingPage = PageFactory.getPage(page, PAGES.SEARCHING) as SearchingPage;
+    await HomePage.visitPage();
+    await HomePage.searchFor('');
+    const isDisplayed = SearchingPage.isElementVisible();
+    expect(isDisplayed).toBeTruthy();
 });
 });

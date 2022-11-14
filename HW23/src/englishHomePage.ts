@@ -10,6 +10,6 @@ export class EnglishHomePage extends HomePage {
     };
 
     public async getHeaderElementText() {
-        return this.page.locator(".section__header").textContent;
+        return this.page.locator(".section__header").textContent();
     };
 };

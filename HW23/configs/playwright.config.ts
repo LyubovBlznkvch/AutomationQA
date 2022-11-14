@@ -26,7 +26,7 @@ const config: PlaywrightTestConfig = {
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: 1,
+  retries: 2,
   /* Opt out of parallel tests on CI. */
   workers: 4,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
@@ -54,12 +54,12 @@ const config: PlaywrightTestConfig = {
       },
     },
 
-  //  {
-  //    name: 'firefox',
-  //    use: {
-  //      ...devices['Desktop Firefox'],
-  //    },
-  //  },
+    {
+      name: 'firefox',
+      use: {
+        ...devices['Desktop Firefox'],
+      },
+    },
 
    // {
    //   name: 'webkit',
@@ -98,7 +98,7 @@ const config: PlaywrightTestConfig = {
   ],
 
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */
-  // outputDir: 'test-results/',
+  outputDir: '../assets/test-results/',
 
   /* Run your local dev server before starting the tests */
   // webServer: {
