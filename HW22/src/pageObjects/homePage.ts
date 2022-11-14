@@ -44,9 +44,7 @@ export class HomePage extends BasePage {
 
   public async switchToFrame() {
     const frame = await $("iframe[title='reCAPTCHA']");
-    console.log("Switched to frame!");
     await frame.waitForDisplayed();
-    console.log("Frame is displayed!");
     await browser.switchToFrame(2);
   }
 
