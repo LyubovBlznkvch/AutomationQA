@@ -43,7 +43,7 @@ test("Should corretly switch to english", async ({ page }) => {
 
 });
 
-test.only("Should redirect a user to the page that corresponds the search", async ({page}) => {
+test("Should redirect a user to the page that corresponds the search", async ({page}) => {
     const HomePage = PageFactory.getPage(page, PAGES.HOME);
     const SearchingPage = PageFactory.getPage(page, PAGES.SEARCHING) as SearchingPage;
     await HomePage.visitPage();
