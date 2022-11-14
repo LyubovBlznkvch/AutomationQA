@@ -21,5 +21,5 @@ Feature: Onliner.by Home Page navigation
     When the User clicks on sign-in button
     Then the User sees opened sign-in form
     When the User signs in with valid login and invalid password of 10 symbols 
-    Then the User sees password error massage
+    Then the User sees the captcha window
     
