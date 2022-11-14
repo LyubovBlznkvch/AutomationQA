@@ -4,7 +4,7 @@ Feature: Onliner.by Home Page navigation
     Given the User opens web page https://www.onliner.by/
 
     @buttonTextVerify
-    Scenario Outline: Verify the button <Name> inner text contains <Text>
+    Scenario Outline: Verify the button <Index> inner text contains <Text>
     Then the User sees that the text of button <Index> contains <Text>
     Examples:
     | Text            | Index |
