@@ -1,10 +1,8 @@
-import { Given, Then, When} from "@wdio/cucumber-framework";
+import { Given, Then, When } from "@wdio/cucumber-framework";
 import { validLogin } from "../support/constants";
 import { homePage } from "../pageObjects/homePage";
 import { catalogPage } from "../pageObjects/catalogPage";
 import { generateAlphabeticString } from "../support/helpers";
-import { truncate } from "fs";
-import { Browser } from "selenium-webdriver";
 
 Given(/^the User opens web page (.+)$/, async (url) => {
     await browser.url(url);
@@ -17,14 +15,13 @@ When(/^the User clicks on section button$/, async () => {
 });
 
 Then(/^the User sees the section is selected$/, async () => {
-    const elementOfSection = await catalogPage.isElementDisplayed('//div[text() = "Книги"]');
-    expect(elementOfSection).toBeTruthy;
+    const elementOfSection = await catalogPage.waitForElementDisplayed('//div[text() = "Книги"]');
 });
 
 Then(/^the User sees (.+) as the page title$/, async (pageTitle) => {
     await browser.waitUntil(async () => {
-    return await catalogPage.pageTitle === pageTitle;
- });
+        return await catalogPage.pageTitle === pageTitle;
+    });
 });
 
 Then(/^the User sees that the text of button (.+) contains (.+)$/, async (buttonIndex, buttonText) => {
@@ -46,16 +43,15 @@ Then(/^the User sees opened sign-in form$/, async () => {
 
 When(/^the User signs in with valid login and invalid password of (.+) symbols$/, async (passwordLength) => {
     await (await homePage.getSignInForm()).waitForExist();
-    const invalidPassword  = generateAlphabeticString(passwordLength);
+    const invalidPassword = generateAlphabeticString(passwordLength);
     await homePage.performSignIn(validLogin, invalidPassword);
 });
 
 Then(/^the User sees password error massage$/, async () => {
-    if (await homePage.isElementDisplayed('//div[text() = "Помогите нам улучшить безопасность"]')) {
+    await homePage.waitForElementDisplayed('//div[text() = "Помогите нам улучшить безопасность"]')
     await homePage.switchToFrame();
     await homePage.clickOnCheckBox();
-    };
     const passwordErrorMassage = await homePage.getErrorMassage();
     await passwordErrorMassage.waitForDisplayed();
-    expect(passwordErrorMassage).toHaveText("Неверный логин или пароль");
+    await expect(passwordErrorMassage).toHaveText("Неверный логин или пароль");
 });
