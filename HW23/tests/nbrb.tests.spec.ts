@@ -48,7 +48,7 @@ test("Should corretly switch to english", async () => {
 
 });
 
-test.only("Should redirect a user to the page that corresponds the search", async () => {
+test("Should redirect a user to the page that corresponds the search", async () => {
     await homePage.searchFor('');
     const isVisible = searchingPage.isElementVisible();
     expect(isVisible).toBeTruthy();
