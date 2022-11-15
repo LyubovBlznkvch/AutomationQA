@@ -15,5 +15,4 @@ public isElementVisible() {
     const element = this.page.locator(".form-with-frame form-multiple");
     return element.isVisible();
 }; 
-
 };

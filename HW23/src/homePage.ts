@@ -6,7 +6,7 @@ import { LANGUAGE } from "../utils/types";
 
 export class HomePage extends BasePage {
     protected url: string;
-    constructor (page: Page) {
+    public constructor (page: Page) {
         super(page);
         this.url = baseURL;
     };
