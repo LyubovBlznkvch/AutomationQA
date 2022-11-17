@@ -11,7 +11,7 @@ export class SearchingPage extends HomePage {
         this.url= `${baseUrl}search?searchText=`
     };
 
-public isSearchinFormVisible() {
+public isSearchingFormVisible() {
     const element = this.page.locator(".form-with-frame form-multiple");
     return element.isVisible();
 }; 

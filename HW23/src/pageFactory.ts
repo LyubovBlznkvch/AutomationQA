@@ -3,7 +3,7 @@ import { PAGES } from "../utils/types";
 import { ApplicationPage } from "./applicationPage";
 import { EnglishHomePage } from "./englishHomePage";
 import { HomePage } from "./homePage";
-import { AdminprocPage } from "./adminprocPage";
+import { AdminProcPage } from "./adminProcPage";
 import { SearchingPage } from "./searchingPage";
 
 export class PageFactory {
@@ -11,8 +11,8 @@ export class PageFactory {
         switch (pageName) {
            case PAGES.HOME:
             return new HomePage(page);
-            case PAGES.ADMINPOC:
-                return new AdminprocPage(page);
+            case PAGES.ADMIN_PROC:
+                return new AdminProcPage(page);
                 case PAGES.APPLICATION:
                     return new ApplicationPage(page);
                     case PAGES.ENGLISH:
