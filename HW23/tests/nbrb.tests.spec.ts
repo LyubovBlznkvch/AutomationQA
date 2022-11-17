@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import { ApplicationPage} from '../src/applicationPage';
 import { AdminprocPage } from "../src/adminprocPage";
 import { PageFactory} from '../src/pageFactory';
-import { LANGUAGE, PAGES } from "../utils/types";
+import { LANGUAGES, PAGES } from "../utils/types";
 import { EnglishHomePage } from "../src/englishHomePage";
 import { SearchingPage } from "../src/searchingPage";
 import { HomePage } from "../src/homePage";
@@ -40,9 +40,9 @@ test("Should redirect to correct URL", async () => {
     await adminprocPage.waitForTargetUrl();
 });
 
-test("Should corretly switch to english", async () => {
-    await homePage.switchPageLanguage(LANGUAGE.RU);
-    await homePage.switchPageLanguage(LANGUAGE.EN);
+test("Should correctly switch to english", async () => {
+    await homePage.switchPageLanguage(LANGUAGES.RU);
+    await homePage.switchPageLanguage(LANGUAGES.EN);
     const headerText = await englishHomePage.getHeaderElementText();
     expect(headerText).toEqual("News and Press Releases");
 
