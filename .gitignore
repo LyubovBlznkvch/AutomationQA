@@ -11,3 +11,5 @@ allure-report/
 /playwright/.cache/
 **/*/assets
 **/*/assets/reports
+**/*/assets
+**/*/logs

@@ -3,8 +3,10 @@ import { validLogin } from "../support/constants";
 import { homePage } from "../pageObjects/homePage";
 import { catalogPage } from "../pageObjects/catalogPage";
 import { generateAlphabeticString } from "../support/helpers";
+import { logger } from "../support/logger";
 
 Given(/^the User opens web page (.+)$/, async (url) => {
+    logger.info(`Navigating to ${url} url...`);
     await browser.url(url);
 });
 
