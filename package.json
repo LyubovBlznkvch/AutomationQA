@@ -19,7 +19,7 @@
     "hw23-playwright-allure-report": "allure generate HW23/assets/allure-results --clean -o HW23/assets/allure-report && allure open HW23/assets/allure-report",
     "hw24-cy:open": "cypress open --config-file=./HW24/cypress.config.ts",
     "hw24-cy:run": "cypress run --browser chrome --headed --config-file=./HW24/cypress.config.ts",
-    "hw25-cy:allure:report": "allure generate HW24/cypress/assets/allure-results --clean -o HW24/cypress/assets/allure-report && allure open .HW24/cypress/assets/allure-report"
+    "hw24-cy:allure:report": "allure generate HW24/cypress/assets/allure-results --clean -o HW24/cypress/assets/allure-report && allure open ./HW24/cypress/assets/allure-report"
   },
   "author": "LyubovBlznkvch",
   "license": "ISC",

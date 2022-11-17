@@ -1,6 +1,6 @@
 import { defineConfig } from "cypress";
 import { assetsFolder, baseUrl, defaultWaitingTime } from "./cypress/support/constants/constants";
-import allureWriter from "@shelex/cypress-allure-plugin"
+import AllureWriter from "@shelex/cypress-allure-plugin/writer"
 
 export default defineConfig({
   e2e: {
@@ -11,17 +11,16 @@ export default defineConfig({
     videosFolder: `${assetsFolder}/videos`,
     downloadsFolder: `${assetsFolder}/downloads`,
     screenshotsFolder: `${assetsFolder}/screenshots`,
-    fixturesFolder: "HW24/sypress/fixtures",
     viewportHeight: 1080,
     viewportWidth: 1920,
-   /*  setupNodeEvents(on, config) {
-      allureWriter(on, config);
+    setupNodeEvents(on, config) {
+      AllureWriter(on, config);
       return config;
     },
     env: {
       allure: "true",
       allureResultsPath: "HW24/cypress/assets/allure-results"
-    } */
+    }
 
   },
 });
