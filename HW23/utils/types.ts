@@ -6,7 +6,7 @@ export enum LANGUAGES {
 
 export enum PAGES {
     HOME = "home",
-    ADMINPOC = "adminproc",
+    ADMIN_PROC = "admin_proc",
     APPLICATION = "application",
     ENGLISH = "english",
     SEARCHING = "searching"

@@ -1,12 +1,12 @@
 import { HomePage } from "./homePage";
 import { Page, expect } from "@playwright/test";
-import { baseURL, NBRB } from "../utils/constants";
+import { baseUrl, NBRB } from "../utils/constants";
 
 export class ApplicationPage extends HomePage {
     constructor(page: Page) {
         super(page);
         
-        this.url= `${baseURL}nbrbapplications`
+        this.url= `${baseUrl}nbrbapplications`
     };
 
     public async waitForPageTitle() {

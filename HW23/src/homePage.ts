@@ -1,14 +1,14 @@
 import { Page, expect } from "@playwright/test";
-import { baseURL } from "../utils/constants";
+import { baseUrl } from "../utils/constants";
 import { BasePage } from "./basePage";
-import { LANGUAGE } from "../utils/types";
+import { LANGUAGES } from "../utils/types";
 
 
 export class HomePage extends BasePage {
     protected url: string;
     public constructor (page: Page) {
         super(page);
-        this.url = baseURL;
+        this.url = baseUrl;
     };
  public async visitPage () {
     this.page.goto(this.url);
@@ -24,7 +24,7 @@ public async clickOnApplicationsButton () {
 };
 
 public async searchFor(text: string) {
-    const searchingBar = this.page.locator(".search__input");
+    const searchingBar = this.page.locator(".search__input").first();
     await searchingBar.type(text);
     await this.page.keyboard.press('Enter');
 };
@@ -33,7 +33,7 @@ public async waitForTargetUrl() {
     expect(this.page).toHaveURL(this.url)
 };
 
-public async switchPageLanguage(language: LANGUAGE) {
+public async switchPageLanguage(language: LANGUAGES) {
     await this.page.locator(`//ul//li/a[text()='${language}']`).click();
 };
 

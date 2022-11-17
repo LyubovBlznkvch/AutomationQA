@@ -1,6 +1,6 @@
 import { HomePage } from "./homePage";
 import { Page } from "@playwright/test";
-import { baseURL } from "../utils/constants";
+import { baseUrl } from "../utils/constants";
 
 
 export class SearchingPage extends HomePage {
@@ -8,10 +8,10 @@ export class SearchingPage extends HomePage {
     constructor(page: Page) {
         super(page);
         
-        this.url= `${baseURL}search?searchText=`
+        this.url= `${baseUrl}search?searchText=`
     };
 
-public isElementVisible() {
+public isSearchinFormVisible() {
     const element = this.page.locator(".form-with-frame form-multiple");
     return element.isVisible();
 }; 

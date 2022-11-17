@@ -14,9 +14,10 @@ let englishHomePage: EnglishHomePage;
 let searchingPage: SearchingPage;
 
 test.describe('nbrb.by tests', async () => {
-    test.beforeEach(async ({ page }) => {
+    test.beforeEach(async ({ browser }) => {
+        const page = await browser.newPage();
         homePage = PageFactory.getPage(page, PAGES.HOME) as HomePage;
-        adminprocPage = PageFactory.getPage(page, PAGES.ADMINPOC) as AdminprocPage;
+        adminprocPage = PageFactory.getPage(page, PAGES.ADMIN_PROC) as AdminprocPage;
         applicationPage = PageFactory.getPage(page, PAGES.APPLICATION) as ApplicationPage;
         englishHomePage = PageFactory.getPage(page, PAGES.ENGLISH) as EnglishHomePage;
         searchingPage = PageFactory.getPage(page, PAGES.SEARCHING) as SearchingPage;
@@ -50,7 +51,7 @@ test("Should correctly switch to english", async () => {
 
 test("Should redirect a user to the page that corresponds the search", async () => {
     await homePage.searchFor('');
-    const isVisible = searchingPage.isElementVisible();
+    const isVisible = searchingPage.isSearchinFormVisible();
     expect(isVisible).toBeTruthy();
 });
 });

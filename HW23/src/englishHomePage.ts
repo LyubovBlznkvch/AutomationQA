@@ -1,12 +1,12 @@
 import { HomePage } from "./homePage";
 import { Page } from "@playwright/test";
-import { baseURL } from "../utils/constants";
+import { baseUrl } from "../utils/constants";
 
 export class EnglishHomePage extends HomePage {
     constructor(page: Page) {
         super(page);
         
-        this.url= `${baseURL}eng`
+        this.url= `${baseUrl}eng`
     };
 
     public async getHeaderElementText() {
