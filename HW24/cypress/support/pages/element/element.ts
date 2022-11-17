@@ -1,4 +1,3 @@
-import { logger } from "../../logger/logger";
 import { NAVIGATION_ITEMS } from "../../types/types";
 
 export class NavigationBar {
