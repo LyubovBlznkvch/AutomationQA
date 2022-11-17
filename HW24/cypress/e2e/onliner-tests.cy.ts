@@ -33,12 +33,12 @@ describe("Onliner.by tests", () => {
 
 
     it("Should redirect to correct URL", () => {
-        homePage.navigationBar.clickNavigationItemByInnerText(NAVIGATION_ITEMS.AUTOBARAKHOLKA);
+        homePage.navigationBar.clickNavigationItemByInnerText(NAVIGATION_ITEMS.AUTOMARKET);
         autoPage.getCurrentUrl().should('eq','https://ab.onliner.by/');
     })
 
     it("Should redirect to sign-in form", () => {
-        homePage.navigationBar.clickNavigationItemByInnerText(NAVIGATION_ITEMS.AUTOBARAKHOLKA);
+        homePage.navigationBar.clickNavigationItemByInnerText(NAVIGATION_ITEMS.AUTOMARKET);
         autoPage.clickOnAdButton();
         autoPage.navigationBar.getSignInForm().should('be.visible');
     });

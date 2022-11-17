@@ -19,7 +19,7 @@ export default defineConfig({
     },
     env: {
       allure: "true",
-      allureResultsPath: "HW24/cypress/assets/allure-results"
+      allureResultsPath: `${assetsFolder}/allure-results`
     }
 
   },

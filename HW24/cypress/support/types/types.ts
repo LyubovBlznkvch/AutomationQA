@@ -1,10 +1,10 @@
 export enum NAVIGATION_ITEMS {
     CATALOG = "Каталог",
-    NOVOSTI = "Новости",
-    AUTOBARAKHOLKA = "Автобарахолка",
-    DOMA_I_KVARTIRY = "Дома и квартиры",
-    USLUGI = "Услуги",
-    BARAKHOLKA = "Барахолка",
+    NEWS = "Новости",
+    AUTOMARKET = "Автобарахолка",
+    HOUSING = "Дома и квартиры",
+    SERVICES = "Услуги",
+    MARKET = "Барахолка",
     FORUM = "Форум"
 };
 
