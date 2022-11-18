@@ -1,4 +1,6 @@
-import { BasePage } from "./basePage"
+import { logger } from "../support/logger";
+import { BasePage } from "./basePage";
+import { PAGES } from "../support/types";
 
 export class CatalogPage extends BasePage {
     constructor() {
@@ -6,6 +8,7 @@ export class CatalogPage extends BasePage {
     }
 
     public getSectionButton() {
+        logger.info(`Getting section button on ${PAGES.CATALOG} page...`);
         return $('//span[text() = "Onlíner Prime"]');
     }
 }
